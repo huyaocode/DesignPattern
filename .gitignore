@@ -1,2 +1,8 @@
 demo/node_modules
 node_modules
+
+*.exe
+
+面试题.md
+
+环境搭建.md
