@@ -1,21 +1,38 @@
-class Animal {
-    name: any;
-    constructor(name) {
-        this.name = name;
-    }
-    getName() {
-        return this.name;
-    }
+/**
+ * 继承
+ * @param Parent
+ * @param Child
+ */
+function extendsClass(Parent, Child) {
+  function F() {}
+  F.prototype = Parent.prototype
+  Child.prototype = new F()
+  Child.prototype.constrctor = Child
+  return Child
 }
-class Dog extends Animal {
-    constructor(name) {
-        super(name);
-    }
-    speak() {
-        return "woof";
-    }
+
+function Animal(name) {
+  this.name = name
 }
-var dog = new Dog("Scamp");
-console.log(dog.getName() + ' says ' + dog.speak());
+Animal.prototype.getName = function() {
+  return this.name
+}
+Animal.prototype.live = function() {
+  console.log('live: 出生到死亡')
+}
 
+function Dog(name) {
+  this.name = name
+}
+Dog.prototype.getName = function() {
+  return this.name
+}
 
+// 原型式继承
+extendsClass(Animal, Dog)
+
+const dog = new Dog('旺财');
+
+dog.live();
+const dogName =dog.getName();
+console.log(dogName)
