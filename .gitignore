@@ -3,6 +3,8 @@ node_modules
 
 *.exe
 
-面试题.md
+*.js.map
 
-环境搭建.md
+*.d.ts
+
+*.js
