@@ -1,5 +1,7 @@
 # 设计模式
 
+使用`TypeScript`实现常见的设计模式
+
 ### 如何运行代码中的`.ts`文件
 使用Node全局安装`typescript`， 在代码目录的终端下运行：`tsc`。将代码编译为es6后使用`node index.js`运行代码。
 
