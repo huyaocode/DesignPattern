@@ -1,6 +1,6 @@
 import IShape from "../IShape";
 
-class Circle extends IShape {
+class Circle implements IShape {
     public  draw():void {
         console.log(" draw circle ");
     };

@@ -1,6 +1,6 @@
 import IShape from "../IShape";
 
-class Line extends IShape {
+class Line implements IShape {
   public draw(): void {
     console.log(' draw line ')
   }

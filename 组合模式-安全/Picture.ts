@@ -1,20 +1,19 @@
 import Shape from './IShape';
 
-class Picture extends Shape {
+class Picture implements Shape {
   private picList: Array<Shape> = []
   private name: String
 
   constructor(name) {
-    super()
     this.name = name
   }
 
-  public add(shape: Shape): Shape {
+  public add(shape: Shape): Picture {
     this.picList.push(shape)
     return this
   }
 
-  public remove(picture): Shape {
+  public remove(picture): Picture {
     for (let i = 0; i < this.picList.length; i++) {
       if (picture === this.picList[i]) {
         this.picList.splice(i, 1)
